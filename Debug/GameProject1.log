@@ -1,0 +1,15 @@
+﻿  VisualGDB: C:\Projects\GameProject1\GameProject1 => /tmp/VisualGDB/c/Projects/GameProject1/GameProject1: 1 files copied (954 bytes), 5 files are up-to-date.
+  VisualGDB: Run "make  CONFIG=Debug" in directory "/tmp/VisualGDB/c/Projects/GameProject1/GameProject1" on pi@192.168.2.14 (SSH)
+  g++ -ggdb -ffunction-sections -O0  -I/opt/vc/include/ -Iopt/vc/include/interface/vcos/pthreads/ -Iopt/vc/include/interface/ -Iopt/vc/include/interface/vmcs_host/linux -DDEBUG=1  -c GameProject1.cpp -o Debug/GameProject1.o -MD -MF Debug/GameProject1.dep
+  g++ -o Debug/GameProject1 -Wl,-gc-sections   -L/opt/vc/lib -Wl,--start-group Debug/GameProject1.o -lGLESv2_static -lEGL_static -lbcm_host -lvchiq_arm -lvcos -lkhrn_static  -Wl,--rpath='$ORIGIN'   -Wl,--end-group
+  /usr/bin/ld: /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o: in function `_start':
+(.text+0x34) : error : undefined reference to `main'
+collect2 : error : ld returned 1 exit status
+  make: *** [Makefile:185: Debug/GameProject1] Error 1
+  -------------------------------------------------------------
+  Command exited with code 2
+  Executable: make
+  Arguments:  CONFIG=Debug
+  Directory: /tmp/VisualGDB/c/Projects/GameProject1/GameProject1
+VisualGDB : error : Command-line action failed
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(44,5): error MSB3073: The command ""C:\Program Files (x86)\Sysprogs\VisualGDB\\VisualGDB.exe" /build "C:\Projects\GameProject1\GameProject1\GameProject1.vcxproj" "/solution:C:\Projects\GameProject1\GameProject1.sln"  "/config:Debug" "/platform:Win32"" exited with code 1.
